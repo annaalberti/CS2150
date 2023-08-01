@@ -1,0 +1,6 @@
+<map id="shuffle" name="shuffle">
+<area shape="rect" id="node1" title="New shuffle method that uses the Mersenne Twister engine." alt="" coords="324,31,385,57"/>
+<area shape="rect" id="node2" href="$class_middle_earth.html#ad730d037c3946ec1129657fc5e0cb353" title="Returns the list of cities to travel to." alt="" coords="107,5,273,32"/>
+<area shape="rect" id="node4" href="$class_middle_earth.html#ad8fe036789b54f21f826fa0abdc06580" title="Iluvatar, the creator of Middle&#45;Earth." alt="" coords="104,56,276,83"/>
+<area shape="rect" id="node3" href="$traveling-skeleton_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="returns the distance between two cities" alt="" coords="5,5,56,32"/>
+</map>

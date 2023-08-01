@@ -1,0 +1,17 @@
+#Anna Alberti
+# 11/28/2021
+
+CXX = clang++ $(CXXFLAGS) $(DOXYGEN)
+CXXFLAGS=-Wall -O2 #Enable all warnings
+DEBUG= -g
+
+a.out: puzzleSolver.o
+	$(CXX) $(DEBUG) puzzleSolver.o -o a.out
+	
+
+puzzleSolver.o: puzzleSolver.cpp
+
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

@@ -1,0 +1,29 @@
+C008 000 jump to start of initalizing variables
+001C 001 length of the program
+0001 002 one
+0000 003 zero
+0000 004 x
+0000 005 i
+0000 006 n 
+3000 007 load function
+3003 008 load 0
+4004 009 store zero in x
+B000 00A do nothing
+B000 00B do nothing
+3003 00C    	 load 0
+4005 00D	 store 0 in i
+3001 00E    	 load length of program
+4006 00F	 store it in n
+3006 010	 load n -- start of loop
+6005 011	 n - i
+E01C 012	 jump if negative
+3007 013	 load load function
+5005 014	 add i to it
+4016 015     		 store into empty line
+0000 016 empty line
+1800 017	 print it out
+3005 018	 load i
+5002 019 add 1+i
+4005 01A store i
+C010 01B	 jump to start of loop
+0000 01C halt end program

@@ -1,0 +1,19 @@
+#Anna Alberti aca5z 10/5/2021
+
+CXX = clang++ 
+CXXFLAGS=-Wall -O2 #Enable all warnings
+
+a.out: AVLPathTest.o AVLNode.o AVLTree.o
+	$(CXX) $(CXXFLAGS) AVLPathTest.o AVLNode.o AVLTree.o -o a.out
+
+AVLPathTest.o: AVLPathTest.cpp AVLNode.h AVLTree.h
+	$(CXX) -c BSTPathTest.cpp
+AVLNode.o: AVLNode.cpp AVLNode.h
+	$(CXX) -c BinaryNode.cpp
+AVLTree.o: AVLTree.cpp AVLTree.h AVLNode.h
+	$(CXX) -c BinarySearchTree.cpp
+
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

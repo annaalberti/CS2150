@@ -1,0 +1,4 @@
+<map id="computeDistance" name="computeDistance">
+<area shape="rect" id="node1" title="this returns the total distance of a route from a starting place and a vector of destinations" alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$class_middle_earth.html#a23b3c1bc67569c0ad00aef88ed4ce863" title="This method returns the distance between the two passed cities." alt="" coords="179,5,349,32"/>
+</map>

@@ -1,0 +1,17 @@
+//Anna Alberti
+//aca5z
+//10/31/2021
+//mathfun.cpp
+// main function for mathlib.s
+
+int main(){
+  cout << "Enter integer 1: ";
+  cin >> int1;
+  cout << "Enter integer 2: ";
+  cin >> int2;
+
+  int product = product(int1, int2);
+  int power = power(int1, int2);
+  
+  return 0;
+}

@@ -1,0 +1,32 @@
+	;; Anna Alberti aca5z 11/1/2021
+
+	global _linearSearch
+
+	section .text
+
+	;; parameter 1 (rdi): pointer to the array
+	;;  parameter 2 (rsi): n size of the array
+	;; parameter 3 (rdx): k target element to find in the array
+
+
+_linearSearch:
+	mov r8, rsi		; move size of array
+	shl r8, 4 		;times 16, since ints are 4 bytes
+	mov r9, 0 		;0 in r9 for incrementing i
+start:	
+	cmp r8, 0 		;is size*4 =0?
+	jmp done 		; not found and at the end of the array
+	mov r10, rdi 		; move start index into
+	add r10, r9 		;add index
+	;;  r10 now stores the memory address of the index we should check
+	cmp [r10], rdx 		;arr[i] = k?
+	mov rax, rdx
+	jpe done		; jumpt to found if yes
+	;; else, increment i
+	add r9, 16 		;add size of integers
+	jmp start
+
+done:	
+	ret
+
+	

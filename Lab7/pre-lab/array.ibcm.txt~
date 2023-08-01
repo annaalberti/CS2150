@@ -1,0 +1,31 @@
+C009 000 jump to the start
+0000 001 x
+0000 002 y
+0000 003 z
+0000 004 s1
+0000 005 zero - this is data and memory
+0000 006 space 
+0000 007
+0000 008
+1000 009 start, read x
+4001 00A store x
+1000 00B read y
+4002 00C store y
+1000 00D read z
+4003 00E store z
+3005 00F load zero
+4004 010 store zero s1
+3001 011 load x
+5002 012 add x+y
+4004 013 store x+y in s1
+5003 014 add s1+z
+D018 015 jumpE if s1+z=0
+1800 016 print s1+z
+C009 017 jump to start
+3001 018 load x
+1800 019 print x
+3002 01A load y
+1800 01B print y
+3003 01C load z
+1800 01D print z
+0000 01E halt

@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="returns the distance between two cities" alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node2" href="$traveling-skeleton_8cpp.html#a2783554f82471f0a73397f0c78f98a02" title="this returns the total distance of a route from a starting place and a vector of destinations" alt="" coords="125,5,250,32"/>
+<area shape="rect" id="node3" href="$class_middle_earth.html#a23b3c1bc67569c0ad00aef88ed4ce863" title="This method returns the distance between the two passed cities." alt="" coords="319,31,489,57"/>
+<area shape="rect" id="node4" href="$class_middle_earth.html#ad730d037c3946ec1129657fc5e0cb353" title="Returns the list of cities to travel to." alt="" coords="104,107,271,133"/>
+<area shape="rect" id="node6" href="$traveling-skeleton_8cpp.html#aa0486f8393a17d2cb5902a009a6dd5c8" title="this returns the total distance of a route from a starting place and a vector of destinations" alt="" coords="145,157,229,184"/>
+<area shape="rect" id="node5" href="$middleearth_8cpp.html#a35cf3a1047a13ce1fc444fc9fd6db3e9" title="New shuffle method that uses the Mersenne Twister engine." alt="" coords="373,107,435,133"/>
+</map>

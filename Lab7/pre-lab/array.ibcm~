@@ -1,0 +1,63 @@
+C00A 000 jump pass variables
+0000 001 zero
+0001 002 one
+0000 003 i
+0000 004 a
+0000 005 n
+4000 006  store function
+0040 007 start valye of a
+0000 008 input
+3000 009  load function
+1000 00A  read n begin storing loop here!!! 
+4005 00B store n in n
+3007 00C load start location
+4004 00D store start value in a
+3001 00E load 0
+4003 00F store 0 in i
+3005 010 load n
+6003 011 sub n-i
+E020 012 jump if neg
+D020 013 jump if 0
+1000 014 read input
+4008 015 store input
+3006 016 load store function
+5004 017 add a
+5003 018 add i
+401B 019 store this location two lines down
+3008 01A load input
+0000 01B store input
+3003 01C load i
+5002 01D add i+1
+4003 01E store i
+C010 01F jump to start
+3001 020 load 0
+4003 021 store 0 in i 
+3005 022 load n
+6003 023 sub n-i
+E030 024 jump 
+D030 025 jump
+3009 026 load load function
+5004 027 add a
+5003 028 add i
+402A 029 store one lines down
+0000 02A store value here
+1800 02B print value
+3003 02C load i
+5002 02D add i+1
+4003 02E store i
+C022 02F jump to start
+3005 030 load n
+6002 031 sub n -1
+4003 032 store n-1 in i
+E03E 033 jump if i < 0
+3009 034 load load function
+5004 035 add a
+5003 036 add i
+4038 037 store value here
+0000 038 store value
+1800 039 print it out
+3003 03A load i 
+6002 03B sub i -1
+4003 03C store i
+C033 03D jump to start
+0000 03E halt

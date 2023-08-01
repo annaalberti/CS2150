@@ -1,0 +1,111 @@
+C011 000 jump pass variables
+0000 001 zero
+0001 002 one
+0000 003 i
+0000 004 a
+0000 005 n
+4000 006  store function
+0070 007 start value of a
+0000 008 input
+3000 009  load function
+000A 00A  ten
+0000 00B j
+0000 00C empty fo rchanges
+0000 00D empty for changes
+0000 00E empty for changes
+0000 00F empty for changes
+0000 010 empty for changes
+3007 011 load start location of a
+4004 012 store start value in a
+3001 013 load 0
+4003 014 store in value of i
+300A 015 load value of ten
+4005 016 store 10 in n
+3005 017 load n --> this is the start of the storing loop
+6003 018 sub n-i
+E027 019 jump if neg
+D027 01A jump if 0
+1000 01B read input
+4008 01C store input in input variable
+3006 01D load the store function
+5004 01E add a
+5003 01F add i
+4022 020 store this location two lines down
+3008 021 load input
+0000 022 store input
+3003 023 load i
+5002 024 add i+1
+4003 025 store i
+C015 026 jump to start of the storing loop
+B000 027 halt for now to test
+B000 028 empty space for changes
+B000 029 empty space for changes
+B000 02A empty space for changes
+B000 02B empty space for changes
+3002 02C load 1
+4003 02D store 1 in i
+3001 02E load 0 --> gonna jump back here
+400B 02F store 0 in j
+300A 030 load 10 
+6003 031 sub 10-i
+D05D 032 jump out if loop is 0 //check jumps CHANGE THIS
+3005 033 load n
+6002 034 sub n-1
+600B 035 sub n-1 - j
+D059 036 jump is negative //check jumps
+3009 037 load load function
+5004 038 add a
+500B 039 add j
+403B 03A store value below here
+0000 03B halt = store value will be overwritten #1
+4085 03C store this value at line 85
+3009 03D load load function
+5004 03E add a
+500B 03F add j
+5002 040 add 1
+4042 041 store value below here
+0000 042 halt = store value will be overwritten #2
+4086 043 store this value at line 86
+3085 044 load #1 line
+6086 045 sub #1-2 line // ISSUE HERE: subtracting mem add not values
+D055 046 jump if this is 0 
+E055 047 jump if this is negative --> leaving if statement condition
+3006 048 load store function
+5004 049 add a
+500B 04A    	 add j
+404D 04B	 store this location two lines below
+3086 04C	 load line 76 value (j+1, we want to switch placed)
+0000 04D	 empty for storing
+3006 04E	 load store function
+5004 04F	 add a
+500B 050	 add j
+5002 051	 add 1
+4054 052	 store this locationt wo lines below
+3085 053	 load line 75 value (j, we want to switch places)
+0000 054	 empty for storing
+300B 055     		 load j
+5002 056		 add j+1
+400B 057		 store j
+C033 058  		 jump back to inner for loop
+3003 059     	load i
+5002 05A	i+1
+4003 05B	store i
+C02E 05C	jump back to start
+B000 05D nothing
+3001 05E load 0
+4003 05F store 0 in i
+300A 060 load 10
+6003 061 sub 10-i
+E06E 062 jump if if neg
+D06E 063 jump if 0
+3009 064 load load function
+5004 065 add a
+5003 066 add i
+4068 067 store one line down
+0000 068 sotre valye here
+1800 069 print value
+3003 06A load i
+5002 06B add i+1
+4003 06C store i
+C060 06D jump bac up
+0000 06E	halt

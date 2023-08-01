@@ -1,0 +1,16 @@
+#Anna Alberti
+# 11/14/2021
+
+CXX = clang++ $(CXXFLAGS)
+CXXFLAGS=-Wall #Enable all warnings
+DEBUG= -g
+
+a.out: threexplusone.o
+	$(CXX) $(DEBUG) threexplusone.o -o a.out
+
+threexplusone.o: threexinput.cpp threexplusone.s
+
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

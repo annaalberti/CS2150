@@ -1,0 +1,8 @@
+	//Anna Alberti
+	//aca5z 11/14/2021
+	//name of file: threexplusone.s
+
+	section. text
+	global threexplusone
+
+threexplusone:	

@@ -1,0 +1,47 @@
+	;; Anna Alberti
+;;; 11/16/2021
+	;; 	aca5z
+
+	global _binarySearch
+	section .text
+
+	;; parameter 1 (rdi): pointer to int array
+	;; parameter 2 (rsi): int representing beginning of array
+	;; parameter 3 (rdx): int representing the end of the array
+	;; parameter 3 (rcx): int target element
+
+_binarySearch:
+
+	;; zero out the middle 
+	xor r10, r10
+	;;  if rdx > rsi, then we haven't found it in the array
+	cmp rdx, rsi
+	jl not_found
+
+	;; find the middle of the array to start
+	add r10, rsi
+	add r10, rdx
+	shr r10, 1		;divide by two
+	
+	;r10 now holds the middle of the array
+	cmp ecx, [rdi+4*r10] 	;compare target element with element at the middle index
+	je finished			;if they are equal, jump to done
+	jg left 		;jump to left side
+	jl right		; jump to right side
+left:
+	lea rdx, [r10]
+	dec rdx
+	call _binarySearch
+	jmp finished
+right:
+	lea rsi, [r10]
+	inc rsi
+	call _binarySearch
+	jmp finished
+
+not_found:
+	mov rax, -1
+	ret
+finished:
+	mov rax, r10
+	ret

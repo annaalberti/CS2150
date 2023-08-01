@@ -1,0 +1,19 @@
+#Anna Alberti
+# 11/28/2021
+
+CXX = clang++ $(CXXFLAGS) $(DOXYGEN)
+#DOXYGEN = doxygen -g
+CXXFLAGS=-Wall #Enable all warnings
+DEBUG= -g
+
+a.out: target.o middleearth.o
+	$(CXX) $(DEBUG) target.o middleearth.o -o a.out
+	doxygen
+
+target.o: traveling-skeleton.cpp
+middleearth.o: middleearth.cpp middleearth.h
+
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

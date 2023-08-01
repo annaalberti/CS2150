@@ -1,0 +1,35 @@
+\hypertarget{middleearth_8h_source}{}\doxysection{middleearth.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MIDDLEEARTH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MIDDLEEARTH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{// see the comments in the lab11 write-\/up, or in middleearth.cpp}}
+\DoxyCodeLine{20 \textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_middle_earth}{MiddleEarth}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_middle_earth_ad8fe036789b54f21f826fa0abdc06580}{MiddleEarth}}(\textcolor{keywordtype}{int} xsize, \textcolor{keywordtype}{int} ysize, \textcolor{keywordtype}{int} num\_cities, \textcolor{keywordtype}{int} seed);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_middle_earth_a5cb0956acbe5e39525e5061c9f3cc79b}{print}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_middle_earth_ae724794944d0ade7854047e779eb7054}{printTable}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_middle_earth_a23b3c1bc67569c0ad00aef88ed4ce863}{getDistance}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& city1, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& city2);}
+\DoxyCodeLine{26     vector<string> \mbox{\hyperlink{class_middle_earth_ad730d037c3946ec1129657fc5e0cb353}{getItinerary}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} num\_city\_names, xsize, ysize;}
+\DoxyCodeLine{30     unordered\_map<string, float> xpos, ypos;}
+\DoxyCodeLine{31     vector<string> cities;}
+\DoxyCodeLine{32     unordered\_map<string, unordered\_map<string, float>> distances;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     mt19937 gen; \textcolor{comment}{// Mersenne-\/Twister random number engine}}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

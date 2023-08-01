@@ -1,0 +1,31 @@
+//Anna Alberti aca 5z
+//name of file: stack.h
+//9/13/2021
+#include <iostream>
+using namespace std;
+#ifndef STACK_H
+#define STACK_H
+#include "List.h"
+
+class stack {
+ public:
+
+  //constructor
+  stack();
+
+  //destructor
+  ~stack();
+  
+  void push(int e); // adds element to the top of the stack
+
+  int top(); //returns the element on the top of the stack (doesn't remove), if empty, exit
+
+  void pop(); //removes the element on the top of the stack but doesn't return it, if empty, exit
+  
+  bool empty(); //tells whether there are any elements left in the stack (false) or not (true)
+
+private:
+  List s; //class variable, can refer to same object by name
+};
+
+#endif

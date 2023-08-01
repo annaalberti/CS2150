@@ -1,0 +1,17 @@
+//Anna Alberti aca5z
+// 10/13/2021
+
+#ifndef HASHTABLE_H
+#define HASHTABLE_H
+
+class hashTable {
+ public:
+  hashTable(); // constructor
+  ~hashTable(); //destructor
+
+  <T> find();
+  void insert();
+  void remove();
+
+  
+};

@@ -1,0 +1,17 @@
+//Anna Alberti aca5z
+// 9/19/2021
+//name of file: prelab4.cpp
+
+
+void prelab4::sizeOfTest(){
+  
+}
+
+int main(){
+  cout << "Enter an integer value" << endl;
+	  cin >> int x;
+
+  
+  
+}
+

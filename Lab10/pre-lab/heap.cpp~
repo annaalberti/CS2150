@@ -1,0 +1,70 @@
+//Anna Alberti
+//aca5z
+//11/17/2021
+
+#include "heap.h"
+#include <iostream>
+using namespace std;
+
+
+//I got this code from the slide set 10 slides!
+void heap::insert(char x){
+  //a vector push_back will resize as necessary
+  heap.push_back(x);
+  //move it up into the right position
+  percolateUp(++heap_size);
+}
+
+void heap::percolateUp(char hole){
+  //get the value just inserted
+  int x = heap[hole];
+  //while we haven't run off the top and while
+  //the value is less than the parent...
+  for ( ; (hole > 1) && (x < heap[hole/2]); hole/=2){
+    heap[hole = heap[hole/2]; //move parent down
+  }
+      //correct position found! insert at the spot
+      heap[hole] = x;
+}
+
+int heap::deleteMin(){
+  if (heap.size() == 0){
+    throw "deleteMin() called on empty heap";
+    //save the value to be returned  
+  }
+  int ret = heap[1];
+  //move the last inserted position into the root
+  heap[1] = heap[heap.size()-1]
+  //make sure the vector knows that there is one element
+  heap.pop_back();
+  //percolate the root down to the proper position
+  percolateDown(1);
+  //return the old root node
+  return ret;
+}
+
+void heap::percolateDown(char hole){
+   //get the value to percolate down
+   int x = heap[hole];
+   //while there is a left child...
+   while (hole*2 <= heap.size()){
+     int child = hole*2; // the left child
+        // is there a right child?  if so, is it lesser?
+     if ( (child+1 <= heap.size()) && 
+             (heap[child+1] < heap[child]) )
+            child++;
+        // if the child is greater than the node...
+        if ( x > heap[child] ) {
+            heap[hole] = heap[child]; // move child up
+            hole = child;             // move hole down
+        } else
+            break;
+    }
+    // correct position found!  insert at that spot
+    heap[hole] = x;
+   }
+ }
+
+int heap::findMin(){
+  return heap[1];
+}

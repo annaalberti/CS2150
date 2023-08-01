@@ -1,0 +1,17 @@
+#Anna Alberti
+# 10/4/2021
+
+CXX = clang++ $(CXXFLAGS)
+CXXFLAGS=-Wall #Enable all warnings
+DEBUG= -g
+
+a.out: TreeCalcTest.o TreeCalc.o TreeNode.o
+	$(CXX) $(DEBUG) TreeCalcTest.o TreeCalc.o TreeNode.o -o a.out
+
+TreeCalcTest.o: TreeCalcTest.cpp TreeCalc.h TreeNode.h
+TreeCalc.o: TreeCalc.cpp TreeCalc.h TreeNode.h
+TreeNode.o: TreeNode.cpp TreeNode.h
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

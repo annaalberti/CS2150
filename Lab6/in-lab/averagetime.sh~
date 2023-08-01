@@ -1,0 +1,4 @@
+#!/bin/bash
+
+RUNNING_TIME=`./a.out | tail -1`
+

@@ -1,0 +1,15 @@
+#Anna Alberti
+# 11/15/2021
+
+CXX = clang $(CXXFLAGS)
+CXXFLAGS=-Wall #Enable all warnings
+DEBUG= -g
+
+a.out: linkedlist.o
+	$(CXX) $(DEBUG) linkedlist.o -o a.out
+
+linkedlist.o: linkedlist.c
+
+.PHONY: clean
+clean:
+	-rm -f *.o a.out

@@ -1,0 +1,5 @@
+<map id="MiddleEarth::getDistance" name="MiddleEarth::getDistance">
+<area shape="rect" id="node1" title="This method returns the distance between the two passed cities." alt="" coords="277,31,448,57"/>
+<area shape="rect" id="node2" href="$traveling-skeleton_8cpp.html#a2783554f82471f0a73397f0c78f98a02" title="this returns the total distance of a route from a starting place and a vector of destinations" alt="" coords="104,5,229,32"/>
+<area shape="rect" id="node3" href="$traveling-skeleton_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="returns the distance between two cities" alt="" coords="5,31,56,57"/>
+</map>

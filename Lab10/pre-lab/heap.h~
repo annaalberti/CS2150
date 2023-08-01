@@ -1,0 +1,20 @@
+//Anna Alberti
+//aca5z
+//11/17/2021
+
+#ifndef HEAP_H
+#define HEAP_H
+#include <vector>
+
+class heap {
+ public:
+  vector<char> heap;
+  
+  void insert(char x);
+  void percolateUp(char hole);
+  int deleteMin();
+  void percolateDown(char hole);
+  int findMin();
+  
+};
+#endif

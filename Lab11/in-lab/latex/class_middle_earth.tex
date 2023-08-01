@@ -1,0 +1,137 @@
+\hypertarget{class_middle_earth}{}\doxysection{Middle\+Earth Class Reference}
+\label{class_middle_earth}\index{MiddleEarth@{MiddleEarth}}
+
+
+Header file for the middleearth class.  
+
+
+
+
+{\ttfamily \#include $<$middleearth.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_middle_earth_ad8fe036789b54f21f826fa0abdc06580}{Middle\+Earth}} (int xsize, int ysize, int num\+\_\+cities, int seed)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_middle_earth_a5cb0956acbe5e39525e5061c9f3cc79b}{print}} ()
+\begin{DoxyCompactList}\small\item\em print out the Middle Earth \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_middle_earth_ae724794944d0ade7854047e779eb7054}{print\+Table}} ()
+\begin{DoxyCompactList}\small\item\em this will print the table of locations \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_middle_earth_a23b3c1bc67569c0ad00aef88ed4ce863}{get\+Distance}} (const string \&city1, const string \&city2)
+\begin{DoxyCompactList}\small\item\em this returns the distance between two cities \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_middle_earth_ad730d037c3946ec1129657fc5e0cb353}{get\+Itinerary}} (unsigned int length)
+\begin{DoxyCompactList}\small\item\em This will get the iternary of where to go. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the middleearth class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_middle_earth_ad8fe036789b54f21f826fa0abdc06580}\label{class_middle_earth_ad8fe036789b54f21f826fa0abdc06580}} 
+\index{MiddleEarth@{MiddleEarth}!MiddleEarth@{MiddleEarth}}
+\index{MiddleEarth@{MiddleEarth}!MiddleEarth@{MiddleEarth}}
+\doxysubsubsection{\texorpdfstring{MiddleEarth()}{MiddleEarth()}}
+{\footnotesize\ttfamily Middle\+Earth\+::\+Middle\+Earth (\begin{DoxyParamCaption}\item[{int}]{xsize,  }\item[{int}]{ysize,  }\item[{int}]{num\+\_\+cities,  }\item[{int}]{seed }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Iluvatar, the creator of Middle-\/\+Earth
+
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{class_middle_earth}{Middle\+Earth}} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em xsize} & \\
+\hline
+{\em ysize} & \\
+\hline
+{\em num\+\_\+cities} & \\
+\hline
+{\em seed} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_middle_earth_a23b3c1bc67569c0ad00aef88ed4ce863}\label{class_middle_earth_a23b3c1bc67569c0ad00aef88ed4ce863}} 
+\index{MiddleEarth@{MiddleEarth}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!MiddleEarth@{MiddleEarth}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily float Middle\+Earth\+::get\+Distance (\begin{DoxyParamCaption}\item[{const string \&}]{city1,  }\item[{const string \&}]{city2 }\end{DoxyParamCaption})}
+
+
+
+this returns the distance between two cities 
+
+This method returns the distance between the two passed cities. If we assume that the hash table (i.\+e. the map) is O(1), then this method call is also O(1)
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em city1} & \\
+\hline
+{\em city2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_middle_earth_ad730d037c3946ec1129657fc5e0cb353}\label{class_middle_earth_ad730d037c3946ec1129657fc5e0cb353}} 
+\index{MiddleEarth@{MiddleEarth}!getItinerary@{getItinerary}}
+\index{getItinerary@{getItinerary}!MiddleEarth@{MiddleEarth}}
+\doxysubsubsection{\texorpdfstring{getItinerary()}{getItinerary()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Middle\+Earth\+::get\+Itinerary (\begin{DoxyParamCaption}\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+
+
+This will get the iternary of where to go. 
+
+Returns the list of cities to travel to. The first city is the original start point as well as the end point. The number of cities passed in does not include this start/end point (so there will be length+1 entries in the returned vector).
+
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_middle_earth_a5cb0956acbe5e39525e5061c9f3cc79b}\label{class_middle_earth_a5cb0956acbe5e39525e5061c9f3cc79b}} 
+\index{MiddleEarth@{MiddleEarth}!print@{print}}
+\index{print@{print}!MiddleEarth@{MiddleEarth}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Middle\+Earth\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print out the Middle Earth 
+
+Prints out info on the created \textquotesingle{}world\textquotesingle{}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_middle_earth_ae724794944d0ade7854047e779eb7054}\label{class_middle_earth_ae724794944d0ade7854047e779eb7054}} 
+\index{MiddleEarth@{MiddleEarth}!printTable@{printTable}}
+\index{printTable@{printTable}!MiddleEarth@{MiddleEarth}}
+\doxysubsubsection{\texorpdfstring{printTable()}{printTable()}}
+{\footnotesize\ttfamily void Middle\+Earth\+::print\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this will print the table of locations 
+
+Prints a tab-\/separated table of the distances, which can be loaded into Excel or similar
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+middleearth.\+h\item 
+middleearth.\+cpp\end{DoxyCompactItemize}

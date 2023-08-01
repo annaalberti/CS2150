@@ -1,0 +1,19 @@
+	;;  Anna Alberti
+	;;  aca5z
+	;;  10/31/21
+
+mathlib:
+	;; prologue
+	xor rax, rax 		; zero out the return register
+	xor r10, r10 		; zero out the counter i
+product:
+	;; multiplication loop
+	cmp r10, rsi 		;check if i == n?
+	je power		; if so, jump to power
+	;; do stuff
+	inc r10 		; increment our counter i
+	jmp product 		;jump back up to start
+power:
+	;; power loop
+
+done

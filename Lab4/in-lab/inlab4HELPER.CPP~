@@ -1,0 +1,23 @@
+//Anna Alberti
+//aca5z
+//9/19/2021
+//name of file: inlab4.cpp
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+bool b = true;
+char c ='a';
+int i = 1;
+double d = 2.0;
+ int* intstar = &i;
+
+ cout << b << endl;
+ cout << c << endl;
+ cout << i << endl;
+ cout << d << endl;
+ cout << intstar << endl;
+
+  }

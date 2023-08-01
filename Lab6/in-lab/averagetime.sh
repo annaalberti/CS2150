@@ -1,0 +1,38 @@
+#!/bin/bash
+
+## get the dictionary file
+dictionary=$1
+
+## get the grid file
+grid=$2
+
+##do it 5 times
+RUNNING_TIME1=`./a.out $dictionary $grid | tail -1`
+TOTAL_TIME=$RUNNING_TIME1
+RUNNING_TIME2=`./a.out $dictionary $grid | tail -1`
+TOTAL_TIME=$((TOTAL_TIME+RUNNING_TIME2))
+RUNNING_TIME3=`./a.out $dictionary $grid | tail -1`
+TOTAL_TIME=$((TOTAL_TIME+RUNNING_TIME3))
+RUNNING_TIME4=`./a.out $dictionary $grid | tail -1`
+TOTAL_TIME=$((TOTAL_TIME+RUNNING_TIME4))
+RUNNING_TIME5=`./a.out $dictionary $grid | tail -1`
+TOTAL_TIME=$((TOTAL_TIME+RUNNING_TIME5))
+
+#echo the 5 things
+#echo $RUNNING_TIME1
+#echo $RUNNING_TIME2
+#echo $RUNNING_TIME3
+#echo $RUNNING_TIME4
+#echo $RUNNING_TIME5
+
+#sum the varibales
+#TOTAL_TIME=$((RUNNING_TIME1+RUNNING_TIME2+RUNNING_TIME3+RUNNING_TIME4+RUNNING_TIME5))
+
+#echo $TOTAL_TIME
+
+#divide by 5
+AVERAGE_TIME=$((TOTAL_TIME/5))
+
+echo $((TOTAL_TIME/5))
+
+
